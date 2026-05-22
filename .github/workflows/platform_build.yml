@@ -14,6 +14,11 @@ jobs:
     strategy:
       matrix:
         include:
+          - runner: pi_3b
+            platform: rpiv2
+            sudo: true
+            uv_cmd: ~/.local/bin/uv
+            test_output_dir: /test_data
           - runner: pi_4b
             platform: native
             sudo: false
